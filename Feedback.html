@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="feedbackform.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<style>
+body {
+    font-family: 'Roboto Slab', serif;
+    background: #333;
+    background: -webkit-linear-gradient(to right, black, gray);
+    background: linear-gradient(to right, black, gray);
+}
+.h1-tag{
+    text-align: center;
+    margin-top: 4%;
+}
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+   color: gray;
+}
+@media screen and (max-width: 600px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .form-group{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .btn-primary{
+        margin-left: 20px;
+    }
+}
+.myclass{
+    border-radius: 20px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    margin-bottom: 5px;
+</style>
+<body>
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src='./image/logo.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Movies.html">Movies</a></li>
+                <li><a href="TvShows.html">TvShows</a></li>
+                <li><a href="Games&Apps.html">Games&Apps</a></li>
+                <li><a href="Collections.html">Collections</a></li>
+                <li><a href="Feedback.html">Feeback</a></li>
+                 <li class="social-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+      <section id="form-section">
+        <h1 class="h1-tag" style="color: white;">Your Feedback Is Important To Us</h1>
+        <form class="form-content-section">
+            <div class="form-group">
+                <label for="exampleInputText">Name</label>
+                <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputText">Contact Number (Optional)</label>
+                <input type="text" class="form-control" id="exampleInputText">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary myclass">Post Comment</button>
+        </form>
+    </section>
+
+  <div class="footer">
+        <div class="inside-footer">
+            <div class="footer-container">
+                <div class="logopart">
+                    <img src="./image/logo.png" alt="">
+                </div>
+                <div class="copyright">
+                    <p>copyright &copy <span>Warner Bros</span>,All Rights Reserved-2024.</p>
+                </div>
+                <div class="socials">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>                    
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
