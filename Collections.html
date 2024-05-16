@@ -6,10 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warner Bros</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+  body {
+            background-color: rgb(40, 40, 40);
+        }
+    h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+  padding: 10px;
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  display: none;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.content {
+  background-color: rgb(70, 70, 70);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+  
+
+.show {
+  display: block;
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #181818;
+  color: #fff;
+  cursor: pointer;
+  font-size 30px;
+}
+
+
+.btn:hover {
+  background-color: #fff;
+
+}
+
+
+.btn.active {
+  background-color: #fff;
+   color: #181818;
+   font-size: 35px;
+}
+</style>
 <body>
     <header>
-    <nav>
         <ul class='nav-bar'>
             <li class='logo'><a href='#'><img src='./image/logo.png'/></a></li>
             <input type='checkbox' id='check' />
@@ -32,11 +104,297 @@
         </ul>
     </nav>
     </header>
+
+               <h2  style="text-align: center; font-weight: 700; font-size: 60px; color:white">COLLECTIONS</h2>
+    <h2  style="text-align: center; font-weight: 600; font-size: 20px; color: white;">Family favorites, romantic movies and the best of the ‘80s… Whatever you’re feeling, we’ve got a curated list to match it.</h2>
+<div id="myBtnContainer" style="text-align:center;">
+  <button class="btn" onclick="filterSelection('Family favorites')">Family favorites</button>
+  <button class="btn" onclick="filterSelection('DC')">DC</button>
+  <button class="btn" onclick="filterSelection('classics')">Classics</button>
+  <button class="btn" onclick="filterSelection('Black voices')">Black Voices</button>
+  <button class="btn" onclick="filterSelection('Hottest Picks')">Hottest Picks</button>
+  <button class="btn" onclick="filterSelection('Actios&Adventure Picks')">Actios&Adventure Picks</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column Family favorites">
+    <div class="content">
+      <img src="image/wednesday.jpg" alt="mom" style="width:100%">
+      <h4>Wednesday</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+  <div class="column Family favorites">
+    <div class="content">
+      <img src="image/thor.jpg" alt="Lights" style="width:100%">
+      <h4>Thor</h4>
+      <p>Animation,Comedy</p>
+    </div>
+  </div>
+  <div class="column Family favorites">
+    <div class="content">
+      <img src="image/plane.jpg" alt="Two&Half Men" style="width:100%">
+      <h4>Plane</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+
+  <div class="column Family favorites">
+    <div class="content">
+      <img src="image/slasher.jpeg" alt="money heist" style="width:100%">
+      <h4>Slasher</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+  <div class="column Family favorites">
+    <div class="content">
+      <image src="image/gajaman.png" alt="Seinfled" style="width:100%">
+      <h4>Gajaman</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+  <div class="column Family favorites">
+    <div class="content">
+      <img src="image/dune.jpg" alt="Young Sheldon" style="width:100%">
+      <h4>Dune</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+
+  <div class="column DC">
+    <div class="content">
+      <img src="image/g.jpeg" alt="matrix" style="width:100%">
+      <h4>Matrix</h4>
+      <p>Sci-fi,Action</p>
+    </div>
+  </div>
+  <div class="column DC">
+    <div class="content">
+      <img src="image/supergal.jpeg" alt="supergal" style="width:100%">
+      <h4>Supergal</h4>
+      <p>Sci-fi,Action</p>
+    </div>
+  </div>
+  <div class="column DC">
+    <div class="content">
+      <img src="image/8.jpg" alt="blue beetle" style="width:100%">
+      <h4>Blue Beetle</h4>
+      <p>Sci-fi,Action,Adventure&Animation</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div> 
+ <div class="row">
+  <div class="column DC">
+    <div class="content">
+      <img src="image/6.jpg" alt="beetle juice" style="width:100%">
+      <h4>Beetle Juice</h4>
+      <p>Sci-fi,Action</p>
+    </div>
+  </div>
+  <div class="column DC">
+    <div class="content">
+      <img src="image/nin.jpg" alt="Ninja" style="width:100%">
+      <h4>Ninja GO</h4>
+      <p>Animation,Action</p>
+    </div>
+  </div>
+  <div class="column DC">
+    <div class="content">
+      <img src="image/league.jpeg" alt="Lego Movie" style="width:100%">
+      <h4>Justice League</h4>
+      <p>Animation,Action</p>
+    </div>
+  </div>
+
+  <div class="column classics">
+    <div class="content">
+      <img src="image/swamp.jpeg" alt="swamp" style="width:100%">
+      <h4>Swamp Thing</h4>
+      <p>Action,Horror,Adventure</p>
+    </div>
+  </div>
+  <div class="column classics">
+    <div class="content">
+      <img src="image/penny.jpeg" alt="penny" style="width:100%">
+      <h4>Penny Dreadful</h4>
+      <p>Action,Adventure</p>
+    </div>
+  </div>
+  <div class="column classics">
+    <div class="content">
+      <img src="image/castle.jpeg" alt="classics" style="width:100%">
+      <h4>Castle Rock</h4>
+      <p>Action,Horror,Adventure</p>
+    </div>
+  </div>
+
+  <div class="column classics">
+    <div class="content">
+      <img src="image/originals.jpeg" alt="originals" style="width:100%">
+      <h4>The originals</h4>
+      <p>Action,Horror,Adeventure</p>
+    </div>
+  </div>
+  <div class="column classics">
+    <div class="content">
+      <img src="image/salem.jpeg" alt="outsiders" style="width:100%">
+      <h4>Outsiders</h4>
+      <p>Action&Adeventure</p>
+    </div>
+  </div>
+  <div class="column classics">
+    <div class="content">
+      <img src="image/lovecraft.jpeg" alt="interest" style="width:100%">
+      <h4>Person Of Interest</h4>
+      <p>Action,Adventure</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+             <div class="row">
+  <div class="column Black voices">
+    <div class="content">
+      <img src="image/mom.jpeg" alt="mom" style="width:100%">
+      <h4  style="color: #241e63; text-align: center;">Mom</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+  <div class="column Black voices">
+    <div class="content">
+      <img src="image/tnj.jpeg" alt="Lights" style="width:100%">
+      <h4>Tom & Jerry</h4>
+      <p>Animation,Comedy</p>
+    </div>
+  </div>
+  <div class="column Black voices">
+    <div class="content">
+      <img src="image/two.jpeg" alt="Two&Half Men" style="width:100%">
+      <h4>Two& Half Men</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+
+  <div class="column Black voices">
+    <div class="content">
+      <img src="image/friends.jpg" alt="friends" style="width:100%">
+      <h4>F.r.i.e.n.d.s</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+  <div class="column Black voices">
+    <div class="content">
+      <img src="image/sein.jpeg" alt="Seinfled" style="width:100%">
+      <h4>Seinfled</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+  <div class="column Black voices">
+    <div class="content">
+      <img src="image/young.jpeg" alt="Young Sheldon" style="width:100%">
+      <h4>Young Sheldon</h4>
+      <p>Comedy&Adventure</p>
+    </div>
+  </div>
+
+  <div class="column Hottest Picks">
+    <div class="content">
+      <img src="image/batwoman.jpeg" alt="batwoman" style="width:100%">
+      <h4>Batwoman</h4>
+      <p>Sci-fi,Action</p>
+    </div>
+  </div>
+  <div class="column Hottest Picks">
+    <div class="content">
+      <img src="image/supergal.jpeg" alt="supergal" style="width:100%">
+      <h4>Supergal</h4>
+      <p>Sci-fi,Action</p>
+    </div>
+  </div>
+  <div class="column Hottest Picks">
+    <div class="content">
+      <img src="image/superpets.jpg" alt="league" style="width:100%">
+      <h4>Superpets</h4>
+      <p>Sci-fi,Action,Adventure&Animation</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div> 
+ <div class="row">
+  <div class="column Hottest Picks">
+    <div class="content">
+      <img src="image/m3.jpg" alt="batman" style="width:100%">
+      <h4>Batman v Superman</h4>
+      <p>Sci-fi,Action</p>
+    </div>
+  </div>
+  <div class="column Hottest Picks">
+    <div class="content">
+      <img src="image/nin.jpg" alt="Ninja" style="width:100%">
+      <h4>Ninja GO</h4>
+      <p>Animation,Action</p>
+    </div>
+  </div>
+  <div class="column Hottest Picks">
+    <div class="content">
+      <img src="image/league.jpeg" alt="Lego Movie" style="width:100%">
+      <h4>Justice League</h4>
+      <p>Animation,Action</p>
+    </div>
+  </div>
+
+  <div class="column Actios&Adventure Picks">
+    <div class="content">
+      <img src="image/swamp.jpeg" alt="swamp" style="width:100%">
+      <h4>Swamp Thing</h4>
+      <p>Action,Horror,Adventure</p>
+    </div>
+  </div>
+  <div class="column Actios&Adventure Picks">
+    <div class="content">
+      <img src="image/penny.jpeg" alt="penny" style="width:100%">
+      <h4>Penny Dreadful</h4>
+      <p>Action,Adventure</p>
+    </div>
+  </div>
+  <div class="column Actios&Adventure Picks">
+    <div class="content">
+      <img src="image/castle.jpeg" alt="classics" style="width:100%">
+      <h4>Castle Rock</h4>
+      <p>Action,Horror,Adventure</p>
+    </div>
+  </div>
+
+  <div class="column  Actios&Adventure Picks">
+    <div class="content">
+      <img src="image/originals.jpeg" alt="originals" style="width:100%">
+      <h4>The originals</h4>
+      <p>Action,Horror,Adeventure</p>
+    </div>
+  </div>
+  <div class="column Actios&Adventure Picks">
+    <div class="content">
+      <img src="image/salem.jpeg" alt="outsiders" style="width:100%">
+      <h4>Outsiders</h4>
+      <p>Action&Adeventure</p>
+    </div>
+  </div>
+  <div class="column  Actios&Adventure Picks">
+    <div class="content">
+      <img src="image/lovecraft.jpeg" alt="interest" style="width:100%">
+      <h4>Person Of Interest</h4>
+      <p>Action,Adventure</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>  
+
   <div class="footer">
         <div class="inside-footer">
             <div class="footer-container">
                 <div class="logopart">
-                    <img src="./images/logo.png" alt="">
+                    <img src="./image/logo.png" alt="">
                 </div>
                 <div class="copyright">
                     <p>copyright &copy <span>Warner Bros</span>,All Rights Reserved-2024.</p>
@@ -49,6 +407,57 @@
                 </div>
         </div>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script>
+filterSelection("Family favorites") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
 
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </body>
 </html>
