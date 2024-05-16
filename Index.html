@@ -1,1 +1,1042 @@
 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<style>
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .swiper::selection{
+    user-select: none;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide .image .black{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.0),rgba(0,0,0,0.9));
+  }
+
+  .swiper-slide .image .black h1{
+    font-size: 30px;
+    text-align: left;
+    position: relative;
+    top: 60%;
+    left: 5%;
+    color: #fff;
+  }
+
+  .swiper-slide .image .black .star{
+    color: #ffd500;
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 0;
+    position: relative;
+    top: 60%;
+    left: 5%;
+  }
+
+  .swiper-slide .image .black p{
+    width: 550px;
+    text-align: justify;
+    font-size: 16px;
+    color: #cccccc;
+    margin: 10px 0;
+    position: relative;
+    top: 60%;
+    left: 5%;
+    line-height: 23px;
+    font-family: "Ink Free";
+  }
+
+  .swiper-slide .image .black .genre{
+    text-align: left;
+    font-size: 16px;
+    margin: 13px 0;
+    position: relative;
+    top: 60%;
+    left: 5%;
+  }
+
+  .swiper-slide .image .black .genre a.category{
+    background: #282931;
+    text-decoration: none;
+    color: #cccccc;
+    padding: 2px 7px;
+  }
+
+  .swiper-slide .image .black .genre a.category span{
+    color: #ffe100;
+  }
+
+  .swiper-slide .image .black .watch{
+    width: 700px;
+    text-align: left;
+    display: flex;
+    font-size: 16px;
+    margin: 10px 0;
+    position: relative;
+    top: 60%;
+    left: 5%;
+  }
+
+  .swiper-slide .image .black .watch i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ffe100;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .swiper-slide .image .black .watch p{
+    position: relative;
+    left: 15px;
+    font-family: sans-serif;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+</style>
+<body>
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src='./image/logo.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Movies.html">Movies</a></li>
+                <li><a href="TvShows.html">TvShows</a></li>
+                <li><a href="Games&Apps.html">Games&Apps</a></li>
+                <li><a href="Collections.html">Collections</a></li>
+                <li><a href="Feedback.html">Feeback</a></li>
+                <li class="social-icons">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+<div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+
+                 <div class="image">
+
+                    <div class="black">
+
+                        <h1>Death on the Nile</h1>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Consectetur distinctio quis, ea commodi repellendus 
+                            fugiat aspernatur perspiciatis optio pariatur quod est, 
+                            nihil enim nemo saepe possimus sequi consequuntur, neque 
+                            eius.
+                        </p>
+                        <div class="genre">
+
+                            <a href="#" class="category">Action</a>
+                            <a href="#" class="category">Drama</a>
+                            <a href="#" class="category"><span>4K</span></a>
+
+                        </div>
+                        <div class="watch">
+                            <i class="fa-solid fa-play"></i>
+                            <p>watch the trailer</p>
+                        </div>
+
+                    </div>
+
+                    <img src="DOTN.jpg">
+
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="image">
+
+                    <div class="black">
+
+                        <h1>The Maze Runner</h1>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Consectetur distinctio quis, ea commodi repellendus 
+                            fugiat aspernatur perspiciatis optio pariatur quod est, 
+                            nihil enim nemo saepe possimus sequi consequuntur, neque 
+                            eius.
+                        </p>
+                        <div class="genre">
+
+                            <a href="#" class="category">Action</a>
+                            <a href="#" class="category">Drama</a>
+                            <a href="#" class="category"><span>4K</span></a>
+
+                        </div>
+                        <div class="watch">
+                            <i class="fa-solid fa-play"></i>
+                            <p>watch the trailer</p>
+                        </div>
+
+                    </div>
+
+                    <img src="TMR.jpg">
+
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="image">
+
+                    <div class="black">
+
+                        <h1>The Avengers</h1>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Consectetur distinctio quis, ea commodi repellendus 
+                            fugiat aspernatur perspiciatis optio pariatur quod est, 
+                            nihil enim nemo saepe possimus sequi consequuntur, neque 
+                            eius.
+                        </p>
+                        <div class="genre">
+
+                            <a href="#" class="category">Action</a>
+                            <a href="#" class="category">Drama</a>
+                            <a href="#" class="category"><span>4K</span></a>
+
+                        </div>
+                        <div class="watch">
+                            <i class="fa-solid fa-play"></i>
+                            <p>watch the trailer</p>
+                        </div>
+
+                    </div>
+
+                    <img src="TA.jpg">
+
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="image">
+
+                    <div class="black">
+
+                        <h1>Gran Tourismo</h1>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Consectetur distinctio quis, ea commodi repellendus 
+                            fugiat aspernatur perspiciatis optio pariatur quod est, 
+                            nihil enim nemo saepe possimus sequi consequuntur, neque 
+                            eius.
+                        </p>
+                        <div class="genre">
+
+                            <a href="#" class="category">Action</a>
+                            <a href="#" class="category">Drama</a>
+                            <a href="#" class="category"><span>4K</span></a>
+
+                        </div>
+                        <div class="watch">
+                            <i class="fa-solid fa-play"></i>
+                            <p>watch the trailer</p>
+                        </div>
+
+                    </div>
+
+                    <img src="GT.jpg">
+
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+
+                <div class="image">
+
+                    <div class="black">
+
+                        <h1>Mea Culpa</h1>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Consectetur distinctio quis, ea commodi repellendus 
+                            fugiat aspernatur perspiciatis optio pariatur quod est, 
+                            nihil enim nemo saepe possimus sequi consequuntur, neque 
+                            eius.
+                        </p>
+                        <div class="genre">
+
+                            <a href="#" class="category">Action</a>
+                            <a href="#" class="category">Drama</a>
+                            <a href="#" class="category"><span>4K</span></a>
+
+                        </div>
+                        <div class="watch">
+                            <i class="fa-solid fa-play"></i>
+                            <p>watch the trailer</p>
+                        </div>
+
+                    </div>
+
+                    <img src="MC.jpg">
+
+                </div>
+
+              </div>
+
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+ <div class="second">
+
+        <div class="latest">
+
+            <h1>Popular Movies</h1>
+
+            <div class="box">
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Central Intelligence</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2023</p>
+                            </div>
+                            <p class="category">Animation/Comedy</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>9.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="CI.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Black Panther: Wakanda Forever</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2022</p>
+                            </div>
+                            <p class="category">Action/Adventure</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.1</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="BPWF.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Interceptor</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2022</p>
+                            </div>
+                            <p class="category">Action/Adventure</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>4.6</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="interceptor.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Thor: Love and Thunder</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2022</p>
+                            </div>
+                            <p class="category">Action/Adventure</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>6.3</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="TLT.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Black Adam</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2022</p>
+                            </div>
+                            <p class="category">Action/Adventure</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>6.4</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="BA.jpeg">
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="upcoming">
+
+        <div class="movies_box">
+
+            <h1>Upcoming Movies</h1>
+
+            <div class="box">
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">The Seventh Day</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2023</p>
+                            </div>
+                            <p class="category">Action/Thriller</p>
+
+                            <div class="info">
+
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="TSD.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">John Wick: Chapter 4</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2023</p>
+                            </div>
+                            <p class="category">Action/Neo-noir</p>
+
+                            <div class="info">
+
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="JW4.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Real Steel</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2023</p>
+                            </div>
+                            <p class="category">Adventure</p>
+
+                            <div class="info">
+
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="RS.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Chucky</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2023</p>
+                            </div>
+                            <p class="category">Action/Fantasy</p>
+
+                            <div class="info">
+
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="chucky.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Uncle Drew</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2023</p>
+                            </div>
+                            <p class="category">Action/Adventure</p>
+
+                            <div class="info">
+
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="UD.jpg">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="show">
+
+        <div class="tv_show">
+
+            <h1>World Best TV Show</h1>       
+            
+            <div class="box">
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Never Have I Ever</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2017</p>
+                            </div>
+                            <p class="category">Thriller</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>8.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="NHIE.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Regular Show</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2022</p>
+                            </div>
+                            <p class="category">Comedy</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>8.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="RSS.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">One Piece</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2022</p>
+                            </div>
+                            <p class="category">Mystery</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.4</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="One piece.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">The Witcher</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2011</p>
+                            </div>
+                            <p class="category">Drama</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>9.2</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="TW.jpg">
+
+                </div>
+
+                <div class="card">
+
+                    <div class="details">
+
+                        <div class="left">
+
+                            <p class="name">Youmg Sheldon</p>
+                            <div class="date_quality">
+                                <p class="quality">HD</p>
+                                <p class="date">2012</p>
+                            </div>
+                            <p class="category">Drama</p>
+
+                            <div class="info">
+
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p>7.5</p>
+                                </div>
+                                <div class="time">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <p>120min</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                    <img src="YS.jpg">
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+           
+
+    </section>
+  <div class="footer">
+        <div class="inside-footer">
+            <div class="footer-container">
+                <div class="logopart">
+                    <img src="./image/logo.png" alt="">
+                </div>
+                <div class="copyright">
+                    <p>copyright &copy <span>Warner Bros</span>,All Rights Reserved-2024.</p>
+                </div>
+                <div class="socials">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>                    
+                </div>
+        </div>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>
