@@ -9,124 +9,100 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
 <style>
-.swiper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+       /* Basic styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .slider-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            width: 100%;
+            display: flex;
+        }
+        .slide {
+            flex: 1 0 auto;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        /* Movie info container */
+        .movie-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Navigation arrows styling */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            z-index: 1;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
 
-  .swiper::selection{
-    user-select: none;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide .image .black{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.0),rgba(0,0,0,0.9));
-  }
-
-  .swiper-slide .image .black h1{
-    font-size: 30px;
-    text-align: left;
-    position: relative;
-    top: 60%;
-    left: 5%;
-    color: #fff;
-  }
-
-  .swiper-slide .image .black .star{
-    color: #ffd500;
-    text-align: left;
-    font-size: 16px;
-    margin: 10px 0;
-    position: relative;
-    top: 60%;
-    left: 5%;
-  }
-
-  .swiper-slide .image .black p{
-    width: 550px;
-    text-align: justify;
-    font-size: 16px;
-    color: #cccccc;
-    margin: 10px 0;
-    position: relative;
-    top: 60%;
-    left: 5%;
-    line-height: 23px;
-    font-family: "Ink Free";
-  }
-
-  .swiper-slide .image .black .genre{
-    text-align: left;
-    font-size: 16px;
-    margin: 13px 0;
-    position: relative;
-    top: 60%;
-    left: 5%;
-  }
-
-  .swiper-slide .image .black .genre a.category{
-    background: #282931;
-    text-decoration: none;
-    color: #cccccc;
-    padding: 2px 7px;
-  }
-
-  .swiper-slide .image .black .genre a.category span{
-    color: #ffe100;
-  }
-
-  .swiper-slide .image .black .watch{
-    width: 700px;
-    text-align: left;
-    display: flex;
-    font-size: 16px;
-    margin: 10px 0;
-    position: relative;
-    top: 60%;
-    left: 5%;
-  }
-
-  .swiper-slide .image .black .watch i{
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-    text-align: center;
-    background-color: #ffe100;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  .swiper-slide .image .black .watch p{
-    position: relative;
-    left: 15px;
-    font-family: sans-serif;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+        /* Search bar styling */
+        .search-container {
+            position: relative;
+        }
+        .search-container input[type="text"] {
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .search-container button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #010203;
+            color: white;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #45a049;
+        }
 </style>
 <body>
     <header>
