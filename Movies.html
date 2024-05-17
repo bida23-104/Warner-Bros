@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +7,8 @@
     <title>Warner Bros</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-<style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
         /* Basic styling */
         body {
             margin: 0;
@@ -84,7 +83,10 @@
 
         /* Search bar styling */
         .search-container {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .search-container input[type="text"] {
             padding: 8px 10px;
@@ -105,7 +107,8 @@
             background-color: #45a049;
         }
 
-</style>
+    </style>
+</head>
 <body>
     <header>
     <nav>
@@ -129,10 +132,10 @@
             </span>
             <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </ul>
-     <div class="search-container">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
-      </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
     </nav>
    </header>
 <div class="slider-container">
