@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,9 +30,11 @@
         .slider {
             width: 100%;
             display: flex;
+            transition: transform 0.5s ease;
         }
         .slide {
-            flex: 1 0 auto;
+            flex: 0 0 auto;
+            width: 100%;
             transition: transform 0.5s ease;
             position: relative;
         }
@@ -84,9 +86,10 @@
         /* Search bar styling */
         .search-container {
             position: absolute;
-            top: 50%;
+            top: 50px; /* Adjust according to your design */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
+            z-index: 999; /* Ensure it's above the slider */
         }
         .search-container input[type="text"] {
             padding: 8px 10px;
@@ -106,15 +109,14 @@
         .search-container button:hover {
             background-color: #45a049;
         }
-
     </style>
 </head>
 <body>
     <header>
-    <nav>
-        <ul class='nav-bar'>
-            <li class='logo'><a href='Index.html'><img src='bros.png'/></a></li>
-            <input type='checkbox' id='check' />
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href='Index.html'><img src='bros.png'/></a></li>
+                <input type='checkbox' id='check' />
             <span class="menu">
                 <li><a href="Index.html">Home</a></li>
                 <li><a href="Movies.html">Movies</a></li>
@@ -822,21 +824,27 @@
  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+ <script>
+    let slideIndex = 0;
+    showSlide(slideIndex);
+
+    function nextSlide() {
+        showSlide(slideIndex += 1);
+    }
+
+    function prevSlide() {
+        showSlide(slideIndex -= 1);
+    }
+
+    function showSlide(n) {
+        let slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.transform = "translateX(-" + (slideIndex * 100) + "%)";
+        }
+    }
+</script>
 
 </body>
 </html>
