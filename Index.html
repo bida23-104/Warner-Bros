@@ -1,146 +1,172 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Warner Bros</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      font-size: 22px;
-      display: grid;
-      grid-template-rows: auto 1fr;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Basic styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .slider-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            width: 100%;
+            display: flex;
+        }
+        .slide {
+            flex: 1 0 auto;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        /* Movie info container */
+        .movie-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Navigation arrows styling */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            z-index: 1;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
 
-    .menu-bar {
-      background-color: #000;
-      color: white;
-      grid-column: 1 / -1;
-    }
+        /* Search bar styling */
+        .search-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .search-container input[type="text"] {
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .search-container button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #010203;
+            color: white;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #45a049;
+        }
 
-    .menu-bar header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .logo {
-      height: 70px;
-      margin-right: 20px;
-    }
-
-    .menus {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menus li {
-      margin: 0;
-    }
-
-    .menus li a {
-      color: white;
-      text-decoration: none;
-      font-size: 26px;
-    }
-
-    .search-bar {
-      margin: 20px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      padding: 20px;
-    }
-
-    .grid-section {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 20px;
-    }
-
-    .movie, .tv-show {
-      text-align: center;
-    }
-
-    .movie img, .tv-show img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    h1 {
-      margin: 20px;
-      text-align: center;
-      font-size: 42px;
-    }
-
-    p {
-      text-align: center;
-      margin: 0 20px 20px 20px;
-      font-size: 30px;
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <nav>
-    <div class="menu-bar">
-      <header>
-        <img src="Warner bros.png" alt="Warner Bros Logo" class="logo">
-        <ul class="menus">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="movie.html">Movies</a></li>
-          <li><a href="TV shows.html">TV Shows</a></li>
-          <li><a href="Anime.html">Anime</a></li>
-          <li><a href="Games and Apps.html">Games & Apps</a></li>
-          <li><a href="Collections.html">Collections</a></li>
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='Index.html'><img src='bros.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="Movies.html">Movies</a></li>
+                <li><a href="TvShows.html">TvShows</a></li>
+                <li><a href="Games&Apps.html">Games&Apps</a></li>
+                <li><a href="Collections.html">Collections</a></li>
+                <li><a href="Feedback.html">Feeback</a></li>
+                <li class="social-icons">
+                <a href="https://www.bing.com/ck/a?!&&p=d1c232dafa961317JmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1dhcm5lckJyb3NQaWN0dXJlcy8&ntb=1"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.bing.com/ck/a?!&&p=0b15c611257a57dfJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci93YXJuZXJicm9zcGljdHVyZXM&ntb=1"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.bing.com/ck/a?!&&p=1df4e9565332d2dfJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTE5NA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS93YXJuZXJicm9zZW50ZXJ0YWlubWVudC8&ntb=1"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.bing.com/ck/a?!&&p=ee99ababed94a61bJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+pinterest&u=a1aHR0cHM6Ly93d3cucGludGVyZXN0LmNvbS93YnBpY3R1cmVzLw&ntb=1"><i class="fab fa-pinterest"></i></a>
+                </li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
         </ul>
-      </header>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+   </header>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="DOTN.jpg" alt="Death On The Nile">
+            <div class="movie-info">
+                <h3>Death On The Nile</h3>
+                <p>Description of Movie 1</p>
+                <p>Rating: 4.5/5</p>
+                <button class="play-btn">&#9658;</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="GT.jpg" alt="Gran Turismo">
+            <div class="movie-info">
+                <h3>Gran Turismo</h3>
+                <p>Description of Movie 2</p>
+                <p>Rating: 4.2/5</p>
+                <button class="play-btn">&#9658;</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="interceptor.jpg" alt="Interceptor">
+            <div class="movie-info">
+                <h3>Interceptor</h3>
+                <p>Description of Movie 3</p>
+                <p>Rating: 4.7/5</p>
+                <button class="play-btn">&#9658;</button>
+            </div>
+        </div>
     </div>
-  </nav>
-  <div class="content">
-    <h1>Warner Bros Movies!</h1>
-    <p>Discover a variety of entertainment options & enjoy watching the best offerings across different media types.</p>
-
-    <h1>Recently Added</h1>
-    <section class="grid-section recently-added">
-      <div class="movie">
-        <img src="365 DNI.jpg" alt="365 DNI">
-        <h2>365 DNI</h2>
-        <p>Drama</p>
-      </div>
-      <div class="movie">
-        <img src="Project Almanac (2014).jpg" alt="Project Almanac">
-        <h2>Project Almanac</h2>
-        <p>Sci-fi, Adventure</p>
-      </div>
-      <div class="movie">
-        <img src="Ghosted.jpg" alt="Ghosted">
-        <h2>Ghosted</h2>
-        <p>Action, Drama</p>
-      </div>
-      <div class="movie">
-        <img src="Avatar.jpg" alt="Avatar">
-        <h2>Avatar</h2>
-        <p>Adventure, Sci-fi, Action</p>
-      </div>
-      <div class="movie">
-        <img src="The Mummy.jpg" alt="The Mummy">
-        <h2>The Mummy</h2>
-        <p>Action, Adventure, Sci-fi</p>
-      </div>
-      <div class="movie">
-        <img src="John Wick_ Chapter 4.jpg" alt="John Wick: Chapter 4">
-        <
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
