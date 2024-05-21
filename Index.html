@@ -21,6 +21,42 @@
             padding: 10px 20px;
             text-align: center;
         }
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 30px; /* Adjust the height as needed */
+            margin-right: 10px; /* Add some space between logo and search bar */
+        }
+        /* Search bar styling */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .search-container button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #010203;
+            color: white;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #45a049;
+        }
         .slider-container {
             width: 80%;
             margin: auto;
@@ -82,97 +118,72 @@
         .next {
             right: 0;
         }
-
-        /* Search bar styling */
-        .search-container {
-            position: absolute;
-            top: 50px; /* Adjust according to your design */
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 999; /* Ensure it's above the slider */
-        }
-        .search-container input[type="text"] {
-            padding: 8px 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            width: 200px;
-            box-sizing: border-box;
-        }
-        .search-container button {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            background-color: #010203;
-            color: white;
-            cursor: pointer;
-        }
-        .search-container button:hover {
-            background-color: #45a049;
-        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul class='nav-bar'>
-                <li class='logo'><a href='Index.html'><img src='bros.png'/></a></li>
-                <input type='checkbox' id='check' />
-            <span class="menu">
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="Movies.html">Movies</a></li>
-                <li><a href="TvShows.html">TvShows</a></li>
-                <li><a href="Games&Apps.html">Games&Apps</a></li>
-                <li><a href="Collections.html">Collections</a></li>
-                <li><a href="Feedback.html">Feeback</a></li>
-                <li class="social-icons">
-                <a href="https://www.bing.com/ck/a?!&&p=d1c232dafa961317JmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1dhcm5lckJyb3NQaWN0dXJlcy8&ntb=1"><i class="fab fa-facebook-square"></i></a>
-                <a href="https://www.bing.com/ck/a?!&&p=0b15c611257a57dfJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci93YXJuZXJicm9zcGljdHVyZXM&ntb=1"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.bing.com/ck/a?!&&p=1df4e9565332d2dfJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTE5NA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS93YXJuZXJicm9zZW50ZXJ0YWlubWVudC8&ntb=1"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.bing.com/ck/a?!&&p=ee99ababed94a61bJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+pinterest&u=a1aHR0cHM6Ly93d3cucGludGVyZXN0LmNvbS93YnBpY3R1cmVzLw&ntb=1"><i class="fab fa-pinterest"></i></a>
+                <li class='logo'>
+                    <a href='Index.html'><img src='bros.png'/></a>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit">Search</button>
+                    </div>
                 </li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-            </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
-        <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
-        </div>
-    </nav>
-   </header>
-<div class="slider-container">
-    <div class="slider">
-        <div class="slide">
-            <img src="DOTN.jpg" alt="Death On The Nile">
-            <div class="movie-info">
-                <h3>Death On The Nile</h3>
-                <p>Description of Movie 1</p>
-                <p>Rating: 4.5/5</p>
-                <button class="play-btn">&#9658;</button>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Movies.html">Movies</a></li>
+                    <li><a href="TvShows.html">TvShows</a></li>
+                    <li><a href="Games&Apps.html">Games&Apps</a></li>
+                    <li><a href="Collections.html">Collections</a></li>
+                    <li><a href="Feedback.html">Feeback</a></li>
+                    <li class="social-icons">
+                        <a href="https://www.bing.com/ck/a?!&&p=d1c232dafa961317JmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIxMg&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1dhcm5lckJyb3NQaWN0dXJlcy8&ntb=1"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.bing.com/ck/a?!&&p=0b15c611257a57dfJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci93YXJuZXJicm9zcGljdHVyZXM&ntb=1"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.bing.com/ck/a?!&&p=1df4e9565332d2dfJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTE5NA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS93YXJuZXJicm9zZW50ZXJ0YWlubWVudC8&ntb=1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.bing.com/ck/a?!&&p=ee99ababed94a61bJmltdHM9MTcxNTgxNzYwMCZpZ3VpZD0yMDUxMGM5MS01Mzc0LTYyYTgtMTIzNy0xZmY1NTJjNjYzMGEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=20510c91-5374-62a8-1237-1ff552c6630a&psq=warner+bros+pinterest&u=a1aHR0cHM6Ly93d3cucGludGVyZXN0LmNvbS93YnBpY3R1cmVzLw&ntb=1"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="DOTN.jpg" alt="Death On The Nile">
+                <div class="movie-info">
+                    <h3>Death On The Nile</h3>
+                    <p>Description of Movie 1</p>
+                    <p>Rating: 4.5/5</p>
+                    <button class="play-btn">&#9658;</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="GT.jpg" alt="Gran Turismo">
+                <div class="movie-info">
+                    <h3>Gran Turismo</h3>
+                    <p>Description of Movie 2</p>
+                    <p>Rating: 4.2/5</p>
+                    <button class="play-btn">&#9658;</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="interceptor.jpg" alt="Interceptor">
+                <div class="movie-info">
+                    <h3>Interceptor</h3>
+                    <p>Description of Movie 3</p>
+                    <p>Rating: 4.7/5</p>
+                    <button class="play-btn">&#9658;</button>
+                </div>
             </div>
         </div>
-        <div class="slide">
-            <img src="GT.jpg" alt="Gran Turismo">
-            <div class="movie-info">
-                <h3>Gran Turismo</h3>
-                <p>Description of Movie 2</p>
-                <p>Rating: 4.2/5</p>
-                <button class="play-btn">&#9658;</button>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="interceptor.jpg" alt="Interceptor">
-            <div class="movie-info">
-                <h3>Interceptor</h3>
-                <p>Description of Movie 3</p>
-                <p>Rating: 4.7/5</p>
-                <button class="play-btn">&#9658;</button>
-            </div>
-        </div>
-    </div>
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <button class="next" onclick="nextSlide()">&#10095;</button>
-</div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+ </div>
  <div class="second">
 
         <div class="latest">
